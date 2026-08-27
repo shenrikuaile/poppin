@@ -156,19 +156,19 @@ export default function HomePage() {
         className={`loading-stage ${pageState === "loading" ? "is-visible" : ""}`}
         aria-hidden={pageState !== "loading"}
       >
-        <div className="progress-rail absolute h-px" aria-hidden="true">
+        <div className="progress-rail" aria-hidden="true">
           <div
-            className="h-full bg-white transition-[width] duration-100 ease-linear"
+            className="progress-fill"
             style={{ width: `${progress}%` }}
           />
         </div>
 
-        <div className="loading-copy absolute left-safe bottom-safe">
+        <div className="loading-copy left-safe bottom-safe">
           Loading...
         </div>
 
         <div
-          className="loading-copy absolute right-safe bottom-safe min-w-[3ch] text-right tabular-nums"
+          className="loading-copy loading-percent right-safe bottom-safe"
           aria-live="polite"
           aria-atomic="true"
         >
